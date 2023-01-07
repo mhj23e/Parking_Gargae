@@ -23,3 +23,24 @@ class ParkingGarage:
                 print("Thank you for your payment. Have a nice day!")
         self.parking_spaces.append(1)
         self.tickets.append(1)
+
+class Main:
+    def __init__(self):
+        self.garage = ParkingGarage()
+        
+    def run(self):
+        while True:
+            action = input("Enter 'take ticket', 'pay for parking', or 'leave garage': ")
+            if action == "take ticket":
+                self.garage.take_ticket()
+            elif action == "pay for parking":
+                self.garage.pay_for_parking()
+            elif action == "leave garage":
+                self.garage.leave_garage()
+                break
+            else:
+                print("Invalid action. Please try again.")
+
+if __name__ == "__main__":
+    main = Main()
+    main.run()
