@@ -5,6 +5,8 @@ class ParkingGarage:
         self.current_ticket = {}
     
     def take_ticket(self):
+        self.tickets.append(1)
+        self.parking_spaces.append(1)
         self.tickets.pop()
         self.parking_spaces.pop()
     
